@@ -15,23 +15,23 @@ const leaveSchedules = controller().getLeaveSchedule(person, leaveMonth);
 console.log(leaveSchedules); */
 
 // route for shift schedule, req.params returns an object to passed into right function
-router.get('/shifts/length=:no', function(req, res, next) {
+router.get('/shifts', function(req, res, next) {
 
     res.send({
         title: "shift",
         type: "GET",
         body: req.params,
-        shifts: controller().makeShifts(parseInt(req.params.no), controller().getData().monthObj())
+        shifts: controller().makeShifts(parseInt(req.query.length), controller().getData().monthObj())
     });
 });
 
-// route for leave schedule, req.params returns an object to passed into right function
-router.get('/leaveSchedules/level=:levelNo&&length=:length', function(req, res, next) {
+// route for leave schedule, and req.query/req.params returns an object to passed into the right function buh req.query will be used
+router.get('/leaveSchedules', function(req, res, next) {
     res.send({
         title: "leaveSchedule",
         type: "GET",
         body: req.params,
-        leaveSchedules: controller().makeLeaveSchedules(parseInt(req.params.levelNo), parseInt(req.params.length))
+        leaveSchedules: controller().makeLeaveSchedules(parseInt(req.query.levelNo), parseInt(req.query.length))
     });
 });
 

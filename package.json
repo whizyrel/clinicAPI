@@ -23,5 +23,10 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.6"
-  }
+  },
+  "keywords": [
+    "clinic;",
+    "shift;",
+    "api"
+  ]
 }
