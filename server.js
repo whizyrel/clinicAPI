@@ -11,20 +11,35 @@ app.use(bodyParser.json());
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, application/x-www-form-urlencoded, Accept, Authorization, content-Type');
+    res.header('Access-Control-Allow-Headers', 'GET');
+
+    if (req.method !== "GET") {
+        return res.status(405).json({
+            error: 'Please use a valid HTTP Method'
+        });
+    }
     next();
 });
 
 // serve static files at top level
-app.use(express.static('public'));
+app.use('/', express.static('public'));
 
 // use routes from routes
 app.use('/api', routes);
 
-// error handling middleware
-app.use((err, req, res, next) => {
+// error handling middleware for wrong route
+app.use((req, res, next) => {
+    const error = new Error('Sorry, Page not Found');
+    // @ts-ignore
+    error.status = 404;
+    next(error);
+});
+
+// error handling middleware for usage errors in routes
+app.use((error, req, res, next) => {
     // console.log(err);
-    res.send({
-        error: err.message
+    res.status(error.status || 500).json({
+        error: error.message
     });
     // call next handler
     next();
