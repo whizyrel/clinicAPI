@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/whizyrel/clinicShift.git"
+    "url": "git+https://github.com/whizyrel/clinicAPI.git"
   },
   "author": "Kevin_Israel_Nimot",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/whizyrel/clinicShift/issues"
+    "url": "https://github.com/whizyrel/clinicAPI/issues"
   },
-  "homepage": "https://github.com/whizyrel/clinicShift#readme",
+  "homepage": "https://github.com/whizyrel/clinicAPI#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4"
@@ -27,6 +27,8 @@
   "keywords": [
     "clinic;",
     "shift;",
+    "Leave",
+    "scheduler",
     "api"
   ]
 }
