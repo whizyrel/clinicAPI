@@ -21,7 +21,8 @@ router.get('/shifts', function(req, res, next) {
             error: 'the query isnt a valid format'
         });
     } else {
-        res.status(200).send({
+        // use return to prevent running through middleware twice
+        return res.status(200).send({
             title: "Shifts",
             type: "GET",
             messgae: 'Shifts sucessffully received',
@@ -38,7 +39,8 @@ router.get('/leaveSchedules', function(req, res, next) {
             error: 'the query isnt a valid format'
         });
     } else {
-        res.status(200).send({
+        // use return to prevent running through middleware twice
+        return res.status(200).send({
             title: "LeaveSchedules",
             type: "GET",
             messgae: 'Leave Schedules sucessfully received',
