@@ -10,13 +10,11 @@ app.use(bodyParser.json());
 // solve cors problems
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, application/x-www-form-urlencoded, Accept, Authorization, content-Type');
-    res.header('Access-Control-Allow-Headers', 'GET');
+    res.header('Access-Control-Allow-Headers', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
 
-    if (req.method !== "GET") {
-        return res.status(405).json({
-            error: 'Please use a valid HTTP Method'
-        });
+    if (req.method == "OPTIONS") {
+        return res.status(405).json({});
     }
     next();
 });
