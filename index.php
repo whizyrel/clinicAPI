@@ -12,6 +12,6 @@
         <button class="leave">Leave Schedule</button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./public/script.js"></script>
 </body>
 </html>
