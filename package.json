@@ -16,6 +16,10 @@
   "bugs": {
     "url": "https://github.com/whizyrel/clinicAPI/issues"
   },
+"engines": {
+    "npm": "6.x",
+    "node": "11.x"
+  },
   "homepage": "https://github.com/whizyrel/clinicAPI#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
