@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/whizyrel/clinicAPI/issues"
   },
-"engines": {
+  "engines": {
     "npm": "6.x",
     "node": "11.x"
   },
