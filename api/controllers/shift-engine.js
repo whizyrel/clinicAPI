@@ -1,3 +1,4 @@
+const monthsArr = require('../resources/months')();
 const dataCtrl = () => {
   let date, currMonth, currYear, monthsArr, currMonthName, leaveSchedule;
 
