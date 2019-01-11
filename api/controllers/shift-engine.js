@@ -67,7 +67,7 @@ const dataCtrl = () => {
           break;
 
         default:
-          return "level doesnt exist";
+          return "level doesn't exist";
       }
       return a;
     }
