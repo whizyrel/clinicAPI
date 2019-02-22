@@ -182,7 +182,7 @@ const dataCtrl = () => {
         // consider preference populate shiftSchedule with preference
         // using 50 50 preference normal balance
         // length = Math.random(0.5 * shiftSchedule.length);
-        for (i = 0; i < (shiftSchedule.length)/2; i++) {
+        for (i = 0; i < (shiftSchedule.length / 2); i++) {
           const pos = Math.floor(Math.random() * shiftSchedule.length);
           shiftSchedule.fill(preference[Math.floor(Math.random() * preference.length)].toUpperCase(), pos, pos + 1);
         }
