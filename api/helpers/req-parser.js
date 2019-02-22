@@ -1,9 +1,10 @@
-class reqParser {
-  constructor(){}
+/* eslint-disable require-jsdoc */
+class ReqParser {
+  constructor() {}
   lengthParser(length) {
     let lengthArr = length.split('|');
     console.log(lengthArr);
-    lengthArr = lengthArr.map(cur => {
+    lengthArr = lengthArr.map((cur) => {
       console.log(cur);
       return parseInt(cur);
     });
@@ -12,4 +13,4 @@ class reqParser {
   }
 }
 
-module.exports = reqParser;
+module.exports = new ReqParser();

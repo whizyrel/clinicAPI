@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 exports.shiftVerification = (req, res, next) => {
   const bool = req.query.length !== undefined && req.query.length !== null && req.query.length !== '';
   if (bool) {
