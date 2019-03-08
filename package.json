@@ -35,5 +35,6 @@
     "Leave",
     "scheduler",
     "api"
-  ]
+  ],
+  "heroku-run-build-script": true
 }
